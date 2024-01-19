@@ -180,8 +180,8 @@ $(document).ready(function () {
   var c = 0;
   $(window).scroll(function () {
       if ($("div").hasClass("states-grid")) {
-          if (a === 0 && $(this).scrollTop() >= ($(".about-sec .state").offset().top) - 500) {
-              $('.about-sec .state-num').each(function () {
+          if (a === 0 && $(this).scrollTop() >= ($(".about-blogs-section .state").offset().top) - 500) {
+              $('.about-blogs-section .state-num').each(function () {
                   $(this).prop('Counter', 0).animate({
                       Counter: $(this).text()
                   }, {
