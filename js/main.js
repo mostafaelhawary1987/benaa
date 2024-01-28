@@ -72,6 +72,19 @@ $(document).ready(function () {
           $mediaElements.hide().filter('.' + filterVal).show();
       }
   });
+  ///////// **courses filter** ///////// 
+  var $mediaElements = $('.course');
+  $('.cate-flex .tab-a').click(function (e) {
+      e.preventDefault();
+      var filterVal = $(this).data('filter');
+      $(".cate-flex .tab-a").not(this).removeClass("active");
+      $(this).toggleClass("active");
+      if (filterVal === 'all') {
+          $mediaElements.show();
+      } else {
+          $mediaElements.hide().filter('.' + filterVal).show();
+      }
+  });
 
   ///////// **Testmonials Slider** ///////// 
   $('.testSlider').owlCarousel({
@@ -113,6 +126,31 @@ $(document).ready(function () {
           },
       }
   });
+  ///////// **teacher Slider** ///////// 
+  $('.latest-cour').owlCarousel({
+      rtl: document.dir == 'rtl' ? true : false,
+      loop: true,
+      dots: true,
+      nav: false,
+      margin: 15,
+      responsive: {
+          0: {
+              items: 1,
+          },
+          480: {
+              items: 1,
+          },
+          991: {
+              items: 2,
+          },
+          1024: {
+              items: 2,
+          },
+          1400: {
+              items: 3,
+          },
+      }
+  });
   ///////// **blog Slider** ///////// 
   $('.blogSlider').owlCarousel({
       rtl: document.dir == 'rtl' ? true : false,
@@ -126,6 +164,25 @@ $(document).ready(function () {
           },
           992: {
               items: 2,
+          },
+      }
+  });
+  ///////// **relatedSlider** ///////// 
+  $('.relatedSlider').owlCarousel({
+      rtl: document.dir == 'rtl' ? true : false,
+      loop: true,
+      dots: true,
+      nav: false,
+      margin: 30,
+      responsive: {
+          0: {
+              items: 1,
+          },
+          992: {
+              items: 2,
+          },
+          1200: {
+              items: 3,
           },
       }
   });
