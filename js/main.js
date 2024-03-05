@@ -298,6 +298,61 @@ $(document).ready(function () {
   });
 });
 
+var slider = document.getElementById("ageSlider");
+  noUiSlider.create(slider, {
+    start: [0, 500],
+    connect: true,
+    tooltips: [true, true],
+    format: {
+      from: Number,
+      to: function (value) {
+        return parseInt(value) + "<span>سنه </span>";
+      },
+    },
+    range: {
+      min: 35,
+      max: 80,
+    },
+  });
+
+  var sliders = document.getElementsByClassName("sliders");
+
+  for (var i = 0; i < sliders.length; i++) {
+    noUiSlider.create(sliders[i], {
+      start: [0, 500],
+      connect: true,
+      tooltips: [true, true],
+      format: {
+        from: Number,
+        to: function (value) {
+          return parseInt(value) + "<span>وزن</span>";
+        },
+      },
+      range: {
+        min: 40,
+        max: 120,
+      },
+    });
+  var sliderss = document.getElementsByClassName("sliderss");
+
+  for (var i = 0; i < sliderss.length; i++) {
+    noUiSlider.create(sliderss[i], {
+      start: [0, 500],
+      connect: true,
+      tooltips: [true, true],
+      format: {
+        from: Number,
+        to: function (value) {
+          return parseInt(value) + "<span>الطول</span>";
+        },
+      },
+      range: {
+        min: 140,
+        max: 190,
+      },
+    });
+  }};
+
 menu = function () {
   $("nav").toggleClass("active");
   $("body").toggleClass("overflow");
