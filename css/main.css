@@ -5374,7 +5374,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
   height: 55px;
   box-shadow: none;
-  border-radius: 15px;
+  border-radius: 27px;
   text-align: right;
 }
   .cont textarea {
@@ -5432,7 +5432,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       width: 150px;
       border:1px solid transparent;
       height: 50px;
-      border-radius: 10px;
+      border-radius: 25px;
       color: #fff;
       font-size: 16px;
       -webkit-transition: 0.5s ease;
