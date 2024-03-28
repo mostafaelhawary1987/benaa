@@ -5,6 +5,11 @@ $(window).on('load', function () {
   });
 });
 
+menu = function () {
+    $("nav").toggleClass("active");
+    $("body").toggleClass("overflow");
+    $(".menu-overlay").fadeToggle(400);
+  }
 $(document).ready(function () {
   new WOW().init();
 
@@ -353,8 +358,3 @@ var slider = document.getElementById("ageSlider");
     });
   }};
 
-menu = function () {
-  $("nav").toggleClass("active");
-  $("body").toggleClass("overflow");
-  $(".menu-overlay").fadeToggle(400);
-}
